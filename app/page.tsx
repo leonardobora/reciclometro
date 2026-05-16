@@ -10,7 +10,7 @@ import { IMG } from "@/lib/images";
 
 export default async function Home() {
   const [cities, slugs] = await Promise.all([listCities(), listCitySlugs()]);
-  const featured = cities[0];
+  const featured = cities.find((c) => c.cumulative.totalKg > 0) ?? cities[0];
   const totalCities = NETWORK.cities.PR.length + NETWORK.cities.SP.length;
 
   return (
