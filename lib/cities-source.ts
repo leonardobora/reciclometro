@@ -33,7 +33,7 @@ const LOCAL_FALLBACK: City[] = [
     sectors: JACAREZINHO.sectors,
     centers: JACAREZINHO.centers,
     bannerImageUrl: "https://static.wixstatic.com/media/10cb84_55887738e15546cfac40e2fb894ec01a~mv2.png",
-    mapImageUrl: "https://static.wixstatic.com/media/10cb84_8ec76029eed04eb2b0362880921e2717~mv2.png",
+    mapImageUrl: "https://static.wixstatic.com/media/69bba4_85a34c7a61e2492d9137689d7e36aa4b~mv2.jpg",
   },
 ];
 
