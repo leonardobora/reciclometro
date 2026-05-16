@@ -208,6 +208,58 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* CONHECA O RECI */}
+      <section id="reci" className="mx-auto max-w-7xl px-4 sm:px-6 py-16">
+        <div className="rounded-3xl border border-[var(--border)] bg-gradient-to-br from-[var(--card)] to-[var(--muted)] p-6 sm:p-10 lg:p-14 relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-[var(--accent)]/10 blur-3xl pointer-events-none" />
+          <div className="relative grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
+            <div className="relative">
+              <Image
+                src={IMG.mascoteOficial}
+                alt="Reci, mascote oficial do Reciclômetro — visão frontal, traseira, detalhes e exemplos de aplicação"
+                width={900}
+                height={1100}
+                className="w-full h-auto rounded-2xl shadow-sm ring-1 ring-[var(--border)]"
+              />
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--primary)]">
+                <Sparkles size={14} /> Mascote oficial
+              </span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
+                Conheça o <span className="shimmer-text">Reci</span>
+              </h2>
+              <p className="mt-5 text-[var(--muted-foreground)] leading-relaxed">
+                Reci é o personagem oficial do Reciclômetro da Cidade. Com o painel no peito e ponteiro vivo,
+                traduz números frios em decisões cotidianas — e levanta a bandeira do Lixo Zero em ações
+                educativas, eventos e campanhas de rua.
+              </p>
+              <dl className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
+                <div>
+                  <dt className="font-bold text-[var(--foreground)]">Painel</dt>
+                  <dd className="text-[var(--muted-foreground)] mt-0.5">Taxa de desvio de aterro em destaque, leitura clara e educativa.</dd>
+                </div>
+                <div>
+                  <dt className="font-bold text-[var(--foreground)]">Cores</dt>
+                  <dd className="text-[var(--muted-foreground)] mt-0.5">Azul-marinho e verde — confiança, sustentabilidade e responsabilidade.</dd>
+                </div>
+                <div>
+                  <dt className="font-bold text-[var(--foreground)]">Folhas no topo</dt>
+                  <dd className="text-[var(--muted-foreground)] mt-0.5">Símbolo de crescimento, natureza e renovação.</dd>
+                </div>
+                <div>
+                  <dt className="font-bold text-[var(--foreground)]">Mãos expressivas</dt>
+                  <dd className="text-[var(--muted-foreground)] mt-0.5">Para interação, acenos e engajamento com o público.</dd>
+                </div>
+              </dl>
+              <p className="mt-6 text-sm text-[var(--muted-foreground)] italic">
+                Ideal para campanhas em semáforos, eventos, feiras, ações educativas e mobilizações comunitárias.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CIDADES */}
       <section id="cidades" className="mx-auto max-w-7xl px-4 sm:px-6 py-16">
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 items-start">

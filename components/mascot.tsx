@@ -77,7 +77,7 @@ export function Mascot({
         <motion.g
           animate={{ rotate: [-3, 3, -3] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          style={{ originX: "140px", originY: "60px" } as React.CSSProperties}
+          style={{ transformBox: "fill-box", transformOrigin: "50% 100%" } as React.CSSProperties}
         >
           <g transform="translate(118 50) rotate(-30)">
             <path d="M0 0 C 20 -22, 48 -14, 50 18 C 28 22, 6 18, 0 0 Z" fill="url(#leafGrad)" />
@@ -148,7 +148,7 @@ export function Mascot({
               />
             );
           })}
-          {/* tick labels */}
+          {/* tick labels — r=42 keeps numbers tucked just inside the colored arc */}
           {[
             { l: "0%", a: 180 },
             { l: "25%", a: 135 },
@@ -156,12 +156,12 @@ export function Mascot({
             { l: "75%", a: 45 },
             { l: "100%", a: 0 },
           ].map(t => {
-            const r = 74;
+            const r = 42;
             const a = (Math.PI / 180) * t.a;
             const x = Math.cos(a) * r;
             const y = -Math.sin(a) * r;
             return (
-              <text key={t.l} x={x} y={y + 4} fontSize="7" fontWeight="700" fill={NAVY_DARK} textAnchor="middle">
+              <text key={t.l} x={x} y={y + 3} fontSize="7" fontWeight="700" fill={NAVY_DARK} textAnchor="middle" stroke="none">
                 {t.l}
               </text>
             );
@@ -194,12 +194,12 @@ export function Mascot({
           )}
         </g>
 
-        {/* NEEDLE */}
+        {/* NEEDLE — rotate via attribute transform so origin uses SVG coords (140 160) */}
         <motion.g
           initial={{ rotate: -90 }}
           animate={{ rotate: needleAngle }}
           transition={{ duration: 1.4, ease: "easeOut" }}
-          style={{ originX: "140px", originY: "160px" } as React.CSSProperties}
+          style={{ transformBox: "fill-box", transformOrigin: "50% 100%" } as React.CSSProperties}
         >
           <line x1="140" y1="160" x2="140" y2="108" stroke={NAVY_DARK} strokeWidth="3" strokeLinecap="round" />
           <polygon points="136,112 144,112 140,100" fill={NAVY_DARK} />
@@ -242,7 +242,7 @@ export function Mascot({
           <motion.g
             animate={{ rotate: [0, 15, 0, 15, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-            style={{ originX: "236px", originY: "180px" } as React.CSSProperties}
+            style={{ transformBox: "fill-box", transformOrigin: "0% 100%" } as React.CSSProperties}
           >
             <path d="M236 180 q 30 -20 30 -70" stroke={NAVY} strokeWidth="22" fill="none" strokeLinecap="round" />
             <circle cx="266" cy="106" r="22" fill="url(#handGrad)" stroke={LIME_DARK} strokeWidth="2" />

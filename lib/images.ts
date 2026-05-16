@@ -21,7 +21,9 @@ export const IMG = {
   goalMap2026: `${WIX}/10cb84_43896f3d86cf47c4b16c6d85784b46f6~mv2.png`,
 
   jacarezinhoBanner: `${WIX}/10cb84_55887738e15546cfac40e2fb894ec01a~mv2.png`,
-  jacarezinhoNeighborhoods: `${WIX}/10cb84_8ec76029eed04eb2b0362880921e2717~mv2.png`,
+  jacarezinhoNeighborhoods: `${WIX}/69bba4_85a34c7a61e2492d9137689d7e36aa4b~mv2.jpg`,
+
+  mascoteOficial: `${WIX}/69bba4_efd4ddf084124e30b26d079eadfef6cc~mv2.jpg`,
 
   partnerILZB: `${WIX}/10cb84_623a68a0d14b44a8ba3bc16a1d801216~mv2.png`,
   partnerPRLixoZero: `${WIX}/10cb84_1da5499a339946eb9c4225b81dd9797b~mv2.png`,
